@@ -27,7 +27,7 @@ powershell_script "CtxRestrictedUser" do
   import-module grouppolicy
   # Create new group policy object
   New-GPO -name $GP_NAME
-  # $1 = read-host "Enter the name of the local domain. EX: whatever.local :"
+  $1 = $env:USERDNSDOMAIN
   Set-GPRegistryValue -Name $GP_NAME -key "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer" -ValueName RestrictCpl -Type DWORD -Value 4
   Set-GPRegistryValue -Name $GP_NAME -key "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer" -ValueName NoClose -Type DWORD -Value 1
   Set-GPRegistryValue -Name $GP_NAME -key "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer" -ValueName NoRun -Type DWORD -Value 1
