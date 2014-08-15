@@ -28,7 +28,7 @@ powershell_script "CtxStartMenuTaskBar" do
   import-module grouppolicy
   # Create new group policy object
   New-GPO -name $GP_NAME
-  Set-GPRegistryValue -Name $GP_NAME -key "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Runonce"  -ValueName CtxDesktopExperienceUser -Type String -Value ('%SystemRoot%\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy AllSigned -WindowStyle Hidden -File "%ProgramFiles(x86)%\\Citrix\\App Delivery Setup Tools\\Enable-CtxDesktopExperienceUser.ps1"')
+  Set-GPRegistryValue -Name $GP_NAME -key "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Runonce"  -ValueName CtxDesktopExperienceUser -Type String -Value ('%SystemRoot%\\system32\\WindowsPowerShell\\v1.0\\powershell.exe -ExecutionPolicy AllSigned -WindowStyle Hidden -File "%windir%\\ProgramFiles (x86)\\Citrix\\App Delivery Setup Tools\\Enable-CtxDesktopExperienceUser.ps1"')
   #output htm of GPO
   get-gporeport $gp_name -reporttype html -path ($home + "\\" + $gp_name + ".html")
   Stop-Transcript
