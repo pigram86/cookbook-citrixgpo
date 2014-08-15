@@ -62,10 +62,11 @@ Contributing
 5. Run the tests, ensuring they all pass
 6. Submit a Pull Request
 
-## License and Authors
+License and Authors
+===================
 
-Author:: Todd Pigram (<todd@toddpigram.com>)
-Author:: Ron Oberjohann (<ron@advdat.com>)
+* Author:: Todd Pigram (<todd@toddpigram.com>)
+* Author:: Ron Oberjohann (<ron@advdat.com>)
 
 Copyright:: 2014, Todd Pigram
 
