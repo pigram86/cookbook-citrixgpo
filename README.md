@@ -68,7 +68,7 @@ License and Authors
 * Author:: Todd Pigram (<todd@toddpigram.com>)
 * Author:: Ron Oberjohann (<ron@advdat.com>)
 
-Copyright:: 2014, Todd Pigram
+Copyright:: 2014, Todd Pigram, Ron Oberjohann
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
